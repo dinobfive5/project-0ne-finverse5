@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number Generator</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+    <p id="result"></p>
+</body>
+</html>
+script.js (JavaScript file):
+javascript
+
+Copy code
+function generateRandomNumber() {
+    // Generate a random number between 1 and 100
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    // Display the random number on the web page
+    document.getElementById("result").innerHTML = "Random Number: " + randomNumber;
+}
+main.cpp (C++ file):
+cpp
+
+Copy code
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+int main() {
+    // Seed the random number generator with the current time
+    std::srand(static_cast<unsigned>(std::time(0)));
+
+    // Generate a random number between 1 and 100
+    int randomNumber = std::rand() % 100 + 1;
+
+    // Display the random number
+    std::cout << "Random Number: " << randomNumber << std::endl;
+
+    return 0;
+}
